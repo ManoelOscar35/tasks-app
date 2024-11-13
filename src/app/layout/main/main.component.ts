@@ -12,10 +12,10 @@ const MODULES = [MatDividerModule];
   standalone: true,
   imports: [...COMPONENTS, ...MODULES],
   template: `
-    <div class="h-screen flex w-full border-4 border-blue-700">
-      <app-category class="w-1/4 border-2 border-orange-700" />
-      <mat-divider class="h-full opacity-50"></mat-divider>
-      <app-task class="w-3/4 border-4 border-green-700" />
+    <div class="h-screen flex w-full">
+      <app-category class="w-1/4" />
+      <mat-divider class="h-full opacity-50" vertical />
+      <app-task class="w-3/4" />
     </div>
   `,
   styles: ``,

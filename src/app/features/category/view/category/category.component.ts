@@ -14,17 +14,13 @@ const PIPES = [AsyncPipe];
   imports: [...COMPONENTS, ...PIPES],
   template: `
     <div class="flex flex-col justify-between  h-full w-full">
-      @if (categories$ | async) {
-        <app-main-list />
+      <app-main-list />
 
-        <app-colors-list />
-      }
+      <app-colors-list />
     </div>
   `,
   styles: ``,
 })
 export class CategoryComponent {
   private readonly categoryService = inject(CategoryService);
-
-  public categories$ = this.categoryService.getCategories();
 }
